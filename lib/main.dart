@@ -27,6 +27,162 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xFF15202b),
+      drawer: Drawer(
+        child: ListView(padding: EdgeInsets.zero, children: <Widget>[
+          DrawerHeader(
+            decoration: BoxDecoration(
+              color: Colors.white,
+            ),
+            child: Icon(
+              Icons.star,
+              color: Colors.blue,
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.perm_identity),
+                SizedBox(
+                  width: 10,
+                ),
+                Text('Profile',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.article),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Lists',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.check_circle),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Topics',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.bookmark_border),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Bookmarks',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.flash_on),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Moments',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.shopping_cart),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Purchases',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.payments),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Monetiention',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Icon(Icons.rocket_launch),
+                SizedBox(
+                  width: 8,
+                ),
+                Text('Twitter for Professionals',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Text('Setting and privacy',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(15),
+            child: Row(
+              children: [
+                Text('Help Center',
+                    style: TextStyle(
+                      fontSize: 20,
+                    )),
+              ],
+            ),
+          ),
+          Icon(Icons.star)
+        ]),
+      ),
       appBar: AppBar(
         bottom: PreferredSize(
             preferredSize: const Size.fromHeight(5),
@@ -63,7 +219,8 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             leading: const CircleAvatar(
               radius: 30.0,
-              backgroundImage: NetworkImage('https://www.faceplusplus.com/demo/images/demo-pic21.jpg'),
+              backgroundImage: NetworkImage(
+                  'https://www.faceplusplus.com/demo/images/demo-pic21.jpg'),
             ),
             title: Row(
               children: const <Widget>[
@@ -95,7 +252,8 @@ class MyHomePage extends StatelessWidget {
           ListTile(
             leading: const CircleAvatar(
               radius: 30.0,
-              backgroundImage: NetworkImage('https://media.kairos.com/go-demo/images/team/Ben_Virdee-Chapman.jpg'),
+              backgroundImage: NetworkImage(
+                  'https://media.kairos.com/go-demo/images/team/Ben_Virdee-Chapman.jpg'),
             ),
             title: Row(
               children: const <Widget>[
@@ -138,10 +296,15 @@ class MyHomePage extends StatelessWidget {
         ),
         child: BottomNavigationBar(
           items: const [
-            BottomNavigationBarItem(icon: Icon(TI.home,color:Color(0xFFFFFFFF)), label: ""),
-            BottomNavigationBarItem(icon: Icon(TI.search,color:Color(0xFFFFFFFF)), label: ""),
-            BottomNavigationBarItem(icon: Icon(TI.notification,color:Color(0xFFFFFFFF)), label: ""),
-            BottomNavigationBarItem(icon: Icon(TI.message,color:Color(0xFFFFFFFF)), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.home, color: Color(0xFFFFFFFF)), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.search, color: Color(0xFFFFFFFF)), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.notification, color: Color(0xFFFFFFFF)),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.message, color: Color(0xFFFFFFFF)), label: ""),
           ],
           backgroundColor: const Color(0xFF151F2B),
           showSelectedLabels: false,
