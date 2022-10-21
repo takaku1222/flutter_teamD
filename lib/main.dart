@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_ui/twitter_icons.dart';
 
+import 'message_page.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -60,65 +62,88 @@ class MyHomePage extends StatelessWidget {
             height: 12.0,
             color: Colors.transparent,
           ),
-          ListTile(
-            leading: const CircleAvatar(
-              radius: 30.0,
-              backgroundImage: NetworkImage('https://www.faceplusplus.com/demo/images/demo-pic21.jpg'),
+          TextButton(
+            style: ButtonStyle(
+              padding: MaterialStateProperty.all(EdgeInsets.zero),
+              minimumSize: MaterialStateProperty.all(Size.zero),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             ),
-            title: Row(
-              children: const <Widget>[
-                Text(
-                  '山田 太郎',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  '@yamada123・15分',
-                  style: TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
-                ),
-                SizedBox(
-                  width: 16.0,
-                ),
-              ],
+            child: ListTile(
+              leading: const CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage(
+                    'https://www.faceplusplus.com/demo/images/demo-pic11.jpg'),
+              ),
+              title: Row(
+                children: const <Widget>[
+                  Text(
+                    '山田 太郎',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    '@yamada123・15分',
+                    style: TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
+                  ),
+                  SizedBox(
+                    width: 16.0,
+                  ),
+                ],
+              ),
+              subtitle: const Text(
+                'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                style: TextStyle(fontSize: 16.0, color: Colors.white),
+              ),
             ),
-            subtitle: const Text(
-              'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
-              style: TextStyle(fontSize: 16.0, color: Colors.white),
-            ),
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MessagePage()),
+              );
+            },
           ),
           const Divider(
             height: 12.0,
             color: Colors.transparent,
           ),
-          ListTile(
-            leading: const CircleAvatar(
-              radius: 30.0,
-              backgroundImage: NetworkImage('https://media.kairos.com/go-demo/images/team/Ben_Virdee-Chapman.jpg'),
+          TextButton(
+            style: ButtonStyle(
+              padding: MaterialStateProperty.all(EdgeInsets.zero),
+              minimumSize: MaterialStateProperty.all(Size.zero),
+              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
             ),
-            title: Row(
-              children: const <Widget>[
-                Text(
-                  '山田 太郎',
-                  style: TextStyle(fontSize: 16.0, color: Colors.white),
-                ),
-                SizedBox(
-                  width: 10,
-                ),
-                Text(
-                  '@yamada123・15分',
-                  style: TextStyle(fontSize: 14.0, color: Colors.white),
-                ),
-                SizedBox(
-                  width: 16.0,
-                ),
-              ],
+            child: ListTile(
+              leading: const CircleAvatar(
+                radius: 30.0,
+                backgroundImage: NetworkImage(
+                    'https://www.faceplusplus.com/demo/images/demo-pic1.jpg'),
+              ),
+              title: Row(
+                children: const <Widget>[
+                  Text(
+                    '山田 太郎',
+                    style: TextStyle(fontSize: 16.0, color: Colors.white),
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Text(
+                    '@yamada123・15分',
+                    style: TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
+                  ),
+                  SizedBox(
+                    width: 16.0,
+                  ),
+                ],
+              ),
+              subtitle: const Text(
+                'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                style: TextStyle(fontSize: 16.0, color: Color(0xFF71767B)),
+              ),
             ),
-            subtitle: const Text(
-              'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
-              style: TextStyle(fontSize: 16.0, color: Colors.white),
-            ),
+            onPressed: () => print('clicked!'),
           ),
         ],
       ),
@@ -138,10 +163,15 @@ class MyHomePage extends StatelessWidget {
         ),
         child: BottomNavigationBar(
           items: const [
-            BottomNavigationBarItem(icon: Icon(TI.home,color:Color(0xFFFFFFFF)), label: ""),
-            BottomNavigationBarItem(icon: Icon(TI.search,color:Color(0xFFFFFFFF)), label: ""),
-            BottomNavigationBarItem(icon: Icon(TI.notification,color:Color(0xFFFFFFFF)), label: ""),
-            BottomNavigationBarItem(icon: Icon(TI.message,color:Color(0xFFFFFFFF)), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.home, color: Color(0xFFFFFFFF)), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.search, color: Color(0xFFFFFFFF)), label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.notification, color: Color(0xFFFFFFFF)),
+                label: ""),
+            BottomNavigationBarItem(
+                icon: Icon(TI.message, color: Color(0xFFFFFFFF)), label: ""),
           ],
           backgroundColor: const Color(0xFF151F2B),
           showSelectedLabels: false,
