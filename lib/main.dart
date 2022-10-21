@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:twitter_ui/twitter_icons.dart';
 
+import 'Material.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -13,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Common.primaryColor,
+        canvasColor: Colors.black,
       ),
       home: const MyHomePage(),
     );
@@ -26,162 +29,237 @@ class MyHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFF15202b),
+      backgroundColor: const Color(0xFF202b),
       drawer: Drawer(
-        child: ListView(padding: EdgeInsets.zero, children: <Widget>[
-          DrawerHeader(
-            decoration: BoxDecoration(
-              color: Colors.white,
-            ),
-            child: Icon(
-              Icons.star,
-              color: Colors.blue,
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.perm_identity),
-                SizedBox(
-                  width: 10,
+        child: Column(
+          children: <Widget>[
+            const DrawerHeader(
+              child: UserAccountsDrawerHeader(
+                currentAccountPictureSize: const Size.square(50.0),
+                otherAccountsPicturesSize: const Size.square(30.0),
+                currentAccountPicture: CircleAvatar(
+                  backgroundImage: NetworkImage(
+                      "https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg"),
+                  backgroundColor: Colors.white,
                 ),
-                Text('Profile',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.article),
-                SizedBox(
-                  width: 8,
+                accountName: Text(
+                  "TEST",
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
                 ),
-                Text('Lists',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.check_circle),
-                SizedBox(
-                  width: 8,
+                accountEmail: Text(
+                  "@test",
+                  style: TextStyle(
+                    fontSize: 15,
+                  ),
                 ),
-                Text('Topics',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
+                otherAccountsPictures: [
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    backgroundImage: NetworkImage(
+                        "https://limopiece.com/wp-content/uploads/2021/11/0fc2bfb729dafdac4d967029d6680e8b.jpg"),
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    backgroundImage: NetworkImage(
+                        "https://limopiece.com/wp-content/uploads/2021/12/87a1cfb3de5f539c84bb2cdffdef4fd1.jpg"),
+                  ),
+                  CircleAvatar(
+                    backgroundColor: Colors.white,
+                    backgroundImage: NetworkImage(
+                        "https://limopiece.com/wp-content/uploads/2021/12/39dce509148964070bce238712cc939a.jpg"),
+                  ),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.bookmark_border),
-                SizedBox(
-                  width: 8,
-                ),
-                Text('Bookmarks',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
+            Expanded(
+              child: ListView(
+                padding: const EdgeInsets.all(0),
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.perm_identity,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Text('Profile',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.article,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Lists',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.check_circle,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text(
+                          'Topics',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.bookmark_border,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Bookmarks',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.flash_on,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Moments',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.shopping_cart,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Purchases',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.payments,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Monetiention',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.rocket_launch,
+                          color: Colors.white,
+                        ),
+                        SizedBox(
+                          width: 8,
+                        ),
+                        Text('Twitter for Professionals',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Text('Setting and privacy',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15),
+                    child: Row(
+                      children: [
+                        Text('Help Center',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            )),
+                      ],
+                    ),
+                  ),
+                ],
+              ),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.flash_on),
-                SizedBox(
-                  width: 8,
-                ),
-                Text('Moments',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.shopping_cart),
-                SizedBox(
-                  width: 8,
-                ),
-                Text('Purchases',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.payments),
-                SizedBox(
-                  width: 8,
-                ),
-                Text('Monetiention',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Icon(Icons.rocket_launch),
-                SizedBox(
-                  width: 8,
-                ),
-                Text('Twitter for Professionals',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Text('Setting and privacy',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15),
-            child: Row(
-              children: [
-                Text('Help Center',
-                    style: TextStyle(
-                      fontSize: 20,
-                    )),
-              ],
-            ),
-          ),
-          Icon(Icons.star)
-        ]),
+          ],
+        ),
       ),
       appBar: AppBar(
         bottom: PreferredSize(
