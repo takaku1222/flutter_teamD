@@ -36,8 +36,8 @@ class MyHomePage extends StatelessWidget {
           children: <Widget>[
             const DrawerHeader(
               child: UserAccountsDrawerHeader(
-                currentAccountPictureSize: const Size.square(50.0),
-                otherAccountsPicturesSize: const Size.square(30.0),
+                currentAccountPictureSize: Size.square(50.0),
+                otherAccountsPicturesSize: Size.square(30.0),
                 currentAccountPicture: CircleAvatar(
                   backgroundImage: NetworkImage(
                       "https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg"),
@@ -81,7 +81,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.perm_identity,
                           color: Colors.white,
@@ -100,7 +100,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.article,
                           color: Colors.white,
@@ -119,7 +119,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.check_circle,
                           color: Colors.white,
@@ -140,7 +140,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.bookmark_border,
                           color: Colors.white,
@@ -159,7 +159,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.flash_on,
                           color: Colors.white,
@@ -178,7 +178,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.shopping_cart,
                           color: Colors.white,
@@ -197,7 +197,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.payments,
                           color: Colors.white,
@@ -216,7 +216,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Icon(
                           Icons.rocket_launch,
                           color: Colors.white,
@@ -235,7 +235,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Text('Setting and privacy',
                             style: TextStyle(
                               color: Colors.white,
@@ -247,7 +247,7 @@ class MyHomePage extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.all(15),
                     child: Row(
-                      children: [
+                      children: const [
                         Text('Help Center',
                             style: TextStyle(
                               color: Colors.white,
