@@ -3,6 +3,7 @@ import 'package:twitter_ui/src/screen/home.dart';
 import 'package:twitter_ui/src/screen/message.dart';
 import 'package:twitter_ui/src/screen/notification.dart';
 import 'package:twitter_ui/src/screen/search.dart';
+import 'package:twitter_ui/twitter_icons.dart';
 
 void main() {
   runApp(const MyApp());
@@ -58,25 +59,25 @@ class _MyHomePageState extends State<MyHomePage> {
           items: const [
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.home,
+                  TI.home,
                   color: Colors.white,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.search,
+                  TI.search,
                   color: Colors.white,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.notifications,
+                  TI.notifications,
                   color: Colors.white,
                 ),
                 label: ''),
             BottomNavigationBarItem(
                 icon: Icon(
-                  Icons.mail,
+                  TI.messages,
                   color: Colors.white,
                 ),
                 label: ''),

@@ -8,7 +8,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:twitter_ui/main.dart';
 import 'package:twitter_ui/src/app.dart';
 
 void main() {

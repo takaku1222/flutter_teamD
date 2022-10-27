@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_ui/twitter_icons.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
@@ -11,10 +12,12 @@ class MessagePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color(0xFF15202b),
           elevation: 0,
-          title: Image.asset(
-            'assets/images/Twitter logo.png',
-            height: 50,
-            fit: BoxFit.contain,
+          title: const Text(
+            'メッセージ',
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+            ),
           ),
           actions: [
             IconButton(
@@ -33,11 +36,93 @@ class MessagePage extends StatelessWidget {
             onPressed: () {},
           ),
         ),
-        body: const Center(
-          child: Text(
-            'メッセージ',
-            style: TextStyle(fontSize: 24, color: Colors.white),
-          ),
+        body: Column(
+          children: <Widget>[
+            const Divider(
+              height: 12.0,
+              color: Colors.transparent,
+            ),
+            TextButton(
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all(EdgeInsets.zero),
+                minimumSize: MaterialStateProperty.all(Size.zero),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
+              child: ListTile(
+                leading: const CircleAvatar(
+                  radius: 30.0,
+                  backgroundImage: NetworkImage(
+                      'https://www.faceplusplus.com/demo/images/demo-pic11.jpg'),
+                ),
+                title: Row(
+                  children: const <Widget>[
+                    Text(
+                      '山田 太郎',
+                      style: TextStyle(fontSize: 16.0, color: Colors.white),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '@yamada123・15分',
+                      style:
+                          TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
+                    ),
+                    SizedBox(
+                      width: 16.0,
+                    ),
+                  ],
+                ),
+                subtitle: const Text(
+                  'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                  style: TextStyle(fontSize: 16.0, color: Colors.white),
+                ),
+              ),
+              onPressed: () {},
+            ),
+            const Divider(
+              height: 12.0,
+              color: Colors.transparent,
+            ),
+            TextButton(
+              style: ButtonStyle(
+                padding: MaterialStateProperty.all(EdgeInsets.zero),
+                minimumSize: MaterialStateProperty.all(Size.zero),
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+              ),
+              child: ListTile(
+                leading: const CircleAvatar(
+                  radius: 30.0,
+                  backgroundImage: NetworkImage(
+                      'https://www.faceplusplus.com/demo/images/demo-pic1.jpg'),
+                ),
+                title: Row(
+                  children: const <Widget>[
+                    Text(
+                      '山田 太郎',
+                      style: TextStyle(fontSize: 16.0, color: Colors.white),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '@yamada123・15分',
+                      style:
+                          TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
+                    ),
+                    SizedBox(
+                      width: 16.0,
+                    ),
+                  ],
+                ),
+                subtitle: const Text(
+                  'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                  style: TextStyle(fontSize: 16.0, color: Color(0xFF71767B)),
+                ),
+              ),
+              onPressed: () => print('clicked!'),
+            ),
+          ],
         ),
       ),
     );
