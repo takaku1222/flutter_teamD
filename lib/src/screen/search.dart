@@ -35,7 +35,7 @@ class SearchPage extends StatelessWidget {
         ),
         body: const Center(
           child: Text(
-            'サーチ画面',
+            'サーチ',
             style: TextStyle(fontSize: 24, color: Colors.white),
           ),
         ),
