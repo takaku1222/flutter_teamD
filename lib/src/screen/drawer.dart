@@ -145,15 +145,85 @@ class DrawerPage extends StatelessWidget {
                         Icons.flash_on,
                         color: Colors.white,
                       ),
-                      SizedBox(
-                        width: 8,
-                      ),
                       Text(
                         'Twitterサークル',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 20,
                         ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: PreferredSize(
+                    preferredSize: const Size.fromHeight(5),
+                    child: Container(
+                      color: Colors.grey.withOpacity(0.5),
+                      height: 0.5,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(4),
+                  child: ExpansionTile(
+                    title: const Text(
+                      "Creator Studio",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.all(15),
+                        width: double.infinity,
+                        child: const Text(
+                          "Answers for Question One",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: ExpansionTile(
+                    title: const Text(
+                      "Creator Studio",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                    children: [
+                      Container(
+                        color: Colors.black12,
+                        width: double.infinity,
+                        child: const Text("Answers for Question One"),
+                      ),
+                    ],
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(15),
+                  child: ExpansionTile(
+                    title: const Text(
+                      "Creator Studio",
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 20,
+                      ),
+                    ),
+                    children: [
+                      Container(
+                        color: Colors.black12,
+                        width: double.infinity,
+                        child: const Text("Answers for Question One"),
                       ),
                     ],
                   ),
