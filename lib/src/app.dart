@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+//Scre
+import 'package:twitter_ui/src/screen/drawer.dart';
 import 'package:twitter_ui/src/screen/home.dart';
 import 'package:twitter_ui/src/screen/message.dart';
 import 'package:twitter_ui/src/screen/notification.dart';
@@ -51,6 +53,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        drawer: const DrawerPage(),
         body: _pages[_selectedIndex],
         bottomNavigationBar: BottomNavigationBar(
           backgroundColor: const Color(0xFF15202b),
