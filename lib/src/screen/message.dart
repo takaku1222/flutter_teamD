@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_ui/twitter_icons.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
