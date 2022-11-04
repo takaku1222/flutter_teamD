@@ -20,8 +20,8 @@ class MessagePage extends StatelessWidget {
           ),
           actions: [
             IconButton(
-              icon: const Icon(Icons.star),
-              color: Colors.lightBlue,
+              icon: const Icon(Icons.settings),
+              color: Colors.white,
               onPressed: () {},
             ),
           ],
@@ -32,7 +32,9 @@ class MessagePage extends StatelessWidget {
               ),
               radius: 18,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
         ),
         body: Column(
@@ -56,14 +58,14 @@ class MessagePage extends StatelessWidget {
                 title: Row(
                   children: const <Widget>[
                     Text(
-                      '山田 太郎',
+                      'Wayne Lyons',
                       style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      '@yamada123・15分',
+                      '@Lyons211・1分',
                       style:
                           TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
                     ),
@@ -73,7 +75,7 @@ class MessagePage extends StatelessWidget {
                   ],
                 ),
                 subtitle: const Text(
-                  'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                  'Are there any plans to introduce the islands architecture for hydration in SSR?',
                   style: TextStyle(fontSize: 16.0, color: Colors.white),
                 ),
               ),
@@ -98,14 +100,14 @@ class MessagePage extends StatelessWidget {
                 title: Row(
                   children: const <Widget>[
                     Text(
-                      '山田 太郎',
+                      'Veronica Miles',
                       style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      '@yamada123・15分',
+                      '@Mil44・15分',
                       style:
                           TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
                     ),
@@ -115,7 +117,7 @@ class MessagePage extends StatelessWidget {
                   ],
                 ),
                 subtitle: const Text(
-                  'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                  'Nah, I dunno. Play soccer.. or learn more coding perhaps?',
                   style: TextStyle(fontSize: 16.0, color: Color(0xFF71767B)),
                 ),
               ),
