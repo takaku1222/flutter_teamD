@@ -9,44 +9,105 @@ class DrawerPage extends StatelessWidget {
       backgroundColor: const Color(0xFF15202b),
       child: Column(
         children: <Widget>[
-          const DrawerHeader(
-            child: UserAccountsDrawerHeader(
-              decoration: BoxDecoration(
-                color: Color(0xFF15202b),
-              ),
-              currentAccountPictureSize: Size.square(50.0),
-              otherAccountsPicturesSize: Size.square(30.0),
-              currentAccountPicture: CircleAvatar(
-                backgroundImage: NetworkImage(
-                    "https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg"),
-              ),
-              accountName: Text(
-                "TEST",
-                style: TextStyle(
-                  fontSize: 15,
+          DrawerHeader(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: const [
+                    Padding(
+                      padding: EdgeInsets.all(0),
+                      child: CircleAvatar(
+                        backgroundImage: NetworkImage(
+                            "https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg"),
+                        radius: 25,
+                      ),
+                    ),
+                    SizedBox(
+                      width: 70,
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      backgroundImage: NetworkImage(
+                          "https://limopiece.com/wp-content/uploads/2021/11/0fc2bfb729dafdac4d967029d6680e8b.jpg"),
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Colors.white,
+                      backgroundImage: NetworkImage(
+                          "https://limopiece.com/wp-content/uploads/2021/12/87a1cfb3de5f539c84bb2cdffdef4fd1.jpg"),
+                    ),
+                    SizedBox(
+                      width: 8,
+                    ),
+                    CircleAvatar(
+                      backgroundColor: Color(0xFF15202b),
+                      child: Icon(
+                        Icons.pending,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
                 ),
-              ),
-              accountEmail: Text(
-                "@test",
-                style: TextStyle(
-                  fontSize: 15,
+                const SizedBox(
+                  height: 5,
                 ),
-              ),
-              otherAccountsPictures: [
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: NetworkImage(
-                      "https://limopiece.com/wp-content/uploads/2021/11/0fc2bfb729dafdac4d967029d6680e8b.jpg"),
+                const Text(
+                  'Camille Reid',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                  ),
                 ),
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: NetworkImage(
-                      "https://limopiece.com/wp-content/uploads/2021/12/87a1cfb3de5f539c84bb2cdffdef4fd1.jpg"),
+                const SizedBox(
+                  height: 5,
                 ),
-                CircleAvatar(
-                  backgroundColor: Colors.white,
-                  backgroundImage: NetworkImage(
-                      "https://limopiece.com/wp-content/uploads/2021/12/39dce509148964070bce238712cc939a.jpg"),
+                const Text(
+                  '@camille_reid_6538',
+                  style: TextStyle(
+                    color: Colors.grey,
+                    fontSize: 15,
+                  ),
+                ),
+                const SizedBox(
+                  height: 10,
+                ),
+                Row(
+                  children: const [
+                    Text(
+                      '999',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    Text(
+                      'フォロー',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                    ),
+                    Text(
+                      '　999',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                        fontSize: 16,
+                      ),
+                    ),
+                    Text(
+                      'フォロワー',
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 15,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -166,13 +227,15 @@ class DrawerPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
+                  // height: 70,
                   padding: const EdgeInsets.all(4),
                   child: ExpansionTile(
+                    collapsedIconColor: Colors.white,
                     title: const Text(
                       "Creator Studio",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 16,
+                        fontSize: 17,
                       ),
                     ),
                     children: [
@@ -180,10 +243,10 @@ class DrawerPage extends StatelessWidget {
                         padding: const EdgeInsets.all(15),
                         width: double.infinity,
                         child: const Text(
-                          "Answers for Question One",
+                          "モーメント",
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 17,
                           ),
                         ),
                       ),
@@ -191,39 +254,87 @@ class DrawerPage extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  // height: 70,
+                  padding: const EdgeInsets.all(4),
                   child: ExpansionTile(
+                    collapsedIconColor: Colors.white,
                     title: const Text(
-                      "Creator Studio",
+                      "プロフェッショナルツール",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 17,
                       ),
                     ),
                     children: [
                       Container(
-                        color: Colors.black12,
+                        padding: const EdgeInsets.all(15),
                         width: double.infinity,
-                        child: const Text("Answers for Question One"),
+                        child: const Text(
+                          "Twitter Pro",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15),
+                        width: double.infinity,
+                        child: const Text(
+                          "収益を得る",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                          ),
+                        ),
                       ),
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding: const EdgeInsets.all(4),
                   child: ExpansionTile(
+                    collapsedIconColor: Colors.white,
                     title: const Text(
-                      "Creator Studio",
+                      "設定とサポート",
                       style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20,
+                        fontSize: 17,
                       ),
                     ),
                     children: [
                       Container(
-                        color: Colors.black12,
+                        padding: const EdgeInsets.all(15),
                         width: double.infinity,
-                        child: const Text("Answers for Question One"),
+                        child: const Text(
+                          "設定とプライバシー",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15),
+                        width: double.infinity,
+                        child: const Text(
+                          "ヘルプセンター",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                          ),
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.all(15),
+                        width: double.infinity,
+                        child: const Text(
+                          "購入内容",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 17,
+                          ),
+                        ),
                       ),
                     ],
                   ),

@@ -14,7 +14,7 @@ class HomePage extends StatelessWidget {
           leading: IconButton(
             icon: const CircleAvatar(
               backgroundImage: NetworkImage(
-                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-a1ed61feb4aa-512',
+                'https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg',
               ),
               radius: 18,
             ),

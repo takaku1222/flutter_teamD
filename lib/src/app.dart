@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//Scre
 import 'package:twitter_ui/src/screen/drawer.dart';
 import 'package:twitter_ui/src/screen/home.dart';
 import 'package:twitter_ui/src/screen/message.dart';

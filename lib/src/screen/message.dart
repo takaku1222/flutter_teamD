@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:twitter_ui/twitter_icons.dart';
 
 class MessagePage extends StatelessWidget {
   const MessagePage({super.key});
@@ -21,19 +20,21 @@ class MessagePage extends StatelessWidget {
           ),
           actions: [
             IconButton(
-              icon: const Icon(Icons.star),
-              color: Colors.lightBlue,
+              icon: const Icon(Icons.settings),
+              color: Colors.white,
               onPressed: () {},
             ),
           ],
           leading: IconButton(
             icon: const CircleAvatar(
               backgroundImage: NetworkImage(
-                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-a1ed61feb4aa-512',
+                'https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg',
               ),
               radius: 18,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
         ),
         body: Column(
@@ -57,14 +58,14 @@ class MessagePage extends StatelessWidget {
                 title: Row(
                   children: const <Widget>[
                     Text(
-                      '山田 太郎',
+                      'Wayne Lyons',
                       style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      '@yamada123・15分',
+                      '@Lyons211・1分',
                       style:
                           TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
                     ),
@@ -74,7 +75,7 @@ class MessagePage extends StatelessWidget {
                   ],
                 ),
                 subtitle: const Text(
-                  'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                  'Are there any plans to introduce the islands architecture for hydration in SSR?',
                   style: TextStyle(fontSize: 16.0, color: Colors.white),
                 ),
               ),
@@ -99,14 +100,14 @@ class MessagePage extends StatelessWidget {
                 title: Row(
                   children: const <Widget>[
                     Text(
-                      '山田 太郎',
+                      'Veronica Miles',
                       style: TextStyle(fontSize: 16.0, color: Colors.white),
                     ),
                     SizedBox(
                       width: 10,
                     ),
                     Text(
-                      '@yamada123・15分',
+                      '@Mil44・15分',
                       style:
                           TextStyle(fontSize: 14.0, color: Color(0xFF71767B)),
                     ),
@@ -116,7 +117,7 @@ class MessagePage extends StatelessWidget {
                   ],
                 ),
                 subtitle: const Text(
-                  'テストメッセージ、互換性の確認、バックアップの作成、空き容量の確保などの事前準備',
+                  'Nah, I dunno. Play soccer.. or learn more coding perhaps?',
                   style: TextStyle(fontSize: 16.0, color: Color(0xFF71767B)),
                 ),
               ),
