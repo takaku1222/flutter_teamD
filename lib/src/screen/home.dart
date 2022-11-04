@@ -31,7 +31,9 @@ class HomePage extends StatelessWidget {
               ),
               radius: 18,
             ),
-            onPressed: () {},
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
           ),
         ),
         body: SingleChildScrollView(
