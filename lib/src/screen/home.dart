@@ -12,17 +12,6 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color(0xFF15202b),
           elevation: 0,
-          leading: IconButton(
-            icon: const CircleAvatar(
-              backgroundImage: NetworkImage(
-                'https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg',
-              ),
-              radius: 18,
-            ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
-          ),
           title: Image.asset(
             'assets/images/Twitter logo.png',
             height: 50,
@@ -38,7 +27,7 @@ class HomePage extends StatelessWidget {
           leading: IconButton(
             icon: const CircleAvatar(
               backgroundImage: NetworkImage(
-                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-gd57c02093f3-512',
+                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-a1ed61feb4aa-512',
               ),
               radius: 18,
             ),
@@ -54,7 +43,7 @@ class HomePage extends StatelessWidget {
                 TwitterWidgets(
                   name: '佐藤 ジェシー',
                   subName: '@satou01・15分',
-                  text: 'おやすみ',
+                  text: 'テストメッセージ互換性の確認\nバックアップの作成',
                   number: '1',
                   secondNumber: '5',
                   thirdNumber: '10',
@@ -69,9 +58,9 @@ class HomePage extends StatelessWidget {
                   height: 5,
                 ),
                 TwitterWidgets(
-                  name: '高橋 清',
+                  name: '田中 実',
                   subName: '@tanaka12・20分',
-                  text: 'Flutter大学の修行プランに入った',
+                  text: 'テストメッセージ互換性の確認\nバックアップの作成',
                   number: '2',
                   secondNumber: '12',
                   thirdNumber: '30',
@@ -87,7 +76,7 @@ class HomePage extends StatelessWidget {
                 ),
                 SecondWidget(
                   name: 'Flutter大学',
-                  subName: '@FlutterUniv・5時間',
+                  subName: '@FlutterUniv・40分',
                   text: 'テックフォード割りが出来ました!',
                   number: '6',
                   secondNumber: '120',
@@ -105,8 +94,8 @@ class HomePage extends StatelessWidget {
                 ),
                 TwitterWidgets(
                   name: '鈴木 エマ',
-                  subName: '@suzuki22・9時間',
-                  text: 'テックフォートアカデミー\nに入学しました！',
+                  subName: '@suzuki22・20分',
+                  text: 'テストメッセージ互換性の確認\nバックアップの作成',
                   number: '2',
                   secondNumber: '12',
                   thirdNumber: '30',
@@ -122,30 +111,13 @@ class HomePage extends StatelessWidget {
                 ),
                 TwitterWidgets(
                   name: 'バンタン',
-                  subName: '@vantantechford・23時間',
-                  text: 'Flutter大学に入りました!',
+                  subName: '@vantantechford・40分',
+                  text: 'Flutter大学に入りました',
                   number: '7',
                   secondNumber: '22',
                   thirdNumber: '60',
                   profileImages:
                       'https://pbs.twimg.com/profile_images/1509443361975209990/H4rqMlzi_400x400.jpg',
-                ),
-                Divider(
-                  thickness: 0.1,
-                  color: Colors.white,
-                ),
-                SizedBox(
-                  height: 5,
-                ),
-                TwitterWidgets(
-                  name: '山田 太郎',
-                  subName: '@yamada123・23時間',
-                  text: 'おはよう!',
-                  number: '10',
-                  secondNumber: '20',
-                  thirdNumber: '37',
-                  profileImages:
-                      'https://www.faceplusplus.com/demo/images/demo-pic11.jpg',
                 ),
               ],
             ),
@@ -268,8 +240,8 @@ class SecondWidget extends StatelessWidget {
                   ),
                   const SizedBox(width: 30),
                   const FaIcon(
-                    FontAwesomeIcons.solidHeart,
-                    color: Colors.pink,
+                    FontAwesomeIcons.heart,
+                    color: Colors.grey,
                     size: 15,
                   ),
                   const SizedBox(width: 8),
@@ -335,7 +307,7 @@ class TwitterWidgets extends StatelessWidget {
               children: [
                 Text(
                   name,
-                  style: TextStyle(fontSize: 16, color: Colors.white),
+                  style: const TextStyle(fontSize: 16, color: Colors.white),
                 ),
                 const SizedBox(
                   width: 10,
