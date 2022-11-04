@@ -11,6 +11,17 @@ class HomePage extends StatelessWidget {
         appBar: AppBar(
           backgroundColor: const Color(0xFF15202b),
           elevation: 0,
+          leading: IconButton(
+            icon: const CircleAvatar(
+              backgroundImage: NetworkImage(
+                'https://limopiece.com/wp-content/uploads/2021/11/78a4c67c7551b26c2c150a3ed61ecc76.jpg',
+              ),
+              radius: 18,
+            ),
+            onPressed: () {
+              Scaffold.of(context).openDrawer();
+            },
+          ),
           title: Image.asset(
             'assets/images/Twitter logo.png',
             height: 50,
@@ -23,15 +34,6 @@ class HomePage extends StatelessWidget {
               onPressed: () {},
             ),
           ],
-          leading: IconButton(
-            icon: const CircleAvatar(
-              backgroundImage: NetworkImage(
-                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-a1ed61feb4aa-512',
-              ),
-              radius: 18,
-            ),
-            onPressed: () {},
-          ),
         ),
         body: const Center(
           child: Text(

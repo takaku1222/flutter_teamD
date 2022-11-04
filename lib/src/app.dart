@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:twitter_ui/src/screen/drawer.dart';
 import 'package:twitter_ui/src/screen/home.dart';
 import 'package:twitter_ui/src/screen/message.dart';
 import 'package:twitter_ui/src/screen/notification.dart';
@@ -51,40 +52,52 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        body: _pages[_selectedIndex],
-        bottomNavigationBar: BottomNavigationBar(
-          backgroundColor: const Color(0xFF15202b),
-          currentIndex: _selectedIndex,
-          onTap: _onItemTapped,
-          items: const [
-            BottomNavigationBarItem(
-                icon: Icon(
-                  TI.home,
-                  color: Colors.white,
+          drawer: const DrawerPage(),
+          body: _pages[_selectedIndex],
+          bottomNavigationBar: Container(
+            decoration: const BoxDecoration(
+              border: Border(
+                top: BorderSide(
+                  width: 0.1, //太さ
+                  color: Colors.grey, //色
                 ),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  TI.search,
-                  color: Colors.white,
-                ),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  TI.notifications,
-                  color: Colors.white,
-                ),
-                label: ''),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  TI.messages,
-                  color: Colors.white,
-                ),
-                label: ''),
-          ],
-          type: BottomNavigationBarType.fixed,
-        ),
-      ),
+              ),
+            ),
+            child: BottomNavigationBar(
+              backgroundColor: const Color(0xFF15202b),
+              currentIndex: _selectedIndex,
+              onTap: _onItemTapped,
+              items: const [
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      TI.home,
+                      color: Colors.white,
+                    ),
+                    label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      TI.search,
+                      color: Colors.white,
+                    ),
+                    label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      TI.notifications,
+                      color: Colors.white,
+                    ),
+                    label: ''),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      TI.messages,
+                      color: Colors.white,
+                    ),
+                    label: ''),
+              ],
+              showSelectedLabels: false,
+              showUnselectedLabels: false,
+              type: BottomNavigationBarType.fixed,
+            ),
+          )),
     );
   }
 }
