@@ -27,13 +27,11 @@ class HomePage extends StatelessWidget {
           leading: IconButton(
             icon: const CircleAvatar(
               backgroundImage: NetworkImage(
-                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-a1ed61feb4aa-512',
+                'https://ca.slack-edge.com/T0179KMH83U-U01UFRZGT6C-gd57c02093f3-512',
               ),
               radius: 18,
             ),
-            onPressed: () {
-              Scaffold.of(context).openDrawer();
-            },
+            onPressed: () {},
           ),
         ),
         body: SingleChildScrollView(
